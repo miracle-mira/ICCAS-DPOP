@@ -43,17 +43,17 @@ public class ScoreMng : MonoBehaviour
 
     public void Restart(){
         if(level == 1){
-            SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene("ShootingLevel1");
             restartButton.SetActive(false);
         }
 
         if(level == 2){
-            SceneManager.LoadScene("Level2");
+            SceneManager.LoadScene("ShootingLevel2");
             restartButton.SetActive(false);
         }
 
         if(level == 3){
-            SceneManager.LoadScene("Level3");
+            SceneManager.LoadScene("ShootingLevel3");
             restartButton.SetActive(false);
         }
         
@@ -62,12 +62,12 @@ public class ScoreMng : MonoBehaviour
     public void LevelUp(){
         
         if(level == 1){
-           SceneManager.LoadScene("Level2");
+           SceneManager.LoadScene("ShootingLevel2");
         levelButton.SetActive(false);
         }
 
         if(level == 2){
-           SceneManager.LoadScene("Level3");
+           SceneManager.LoadScene("ShootingLevel3");
             levelButton.SetActive(false);
         }
 
