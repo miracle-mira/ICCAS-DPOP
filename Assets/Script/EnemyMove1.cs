@@ -42,7 +42,7 @@ public class EnemyMove1 : MonoBehaviour
         string cgtag = collision.gameObject.tag;
         if(cgtag == "HeroWeapon"){
             Destroy(gameObject);
-            ScoreMng.inst.AddScore(10);
+            ScoreMng.inst.AddScore(2);
         }
     }
 }
