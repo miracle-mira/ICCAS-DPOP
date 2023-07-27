@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainScene.unity
-    guid: 9c2fd8080e0034897bf5fd6718c35590
+    path: Assets/Scenes/Miro_2.unity
+    guid: 12273e5a6995844779f67fe110a550c4
+  - enabled: 1
+    path: Assets/Scenes/Miro_3.unity
+    guid: 63f3cb6e86dae4beda103de22243bc30
   - enabled: 1
     path: Assets/Scenes/ShootingLevel1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
@@ -17,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ShootingLevel3.unity
     guid: f6c1d804a27a549bcbaa49fe1b311b83
+  - enabled: 1
+    path: Assets/Scenes/Miro_1.unity
+    guid: 39bd0fae04ba04173a3fcbbcad8fcc3d
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: 9c2fd8080e0034897bf5fd6718c35590
   m_configObjects: {}
