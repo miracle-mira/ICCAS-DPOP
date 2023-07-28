@@ -1039,6 +1039,7 @@ MonoBehaviour:
   levelButton: {fileID: 1964578698}
   finishButton: {fileID: 1750863151}
   effect: {fileID: 100018, guid: a40b64bf23366dc42a892af2c6ff6140, type: 3}
+  sprPlayer: {fileID: 614375378}
 --- !u!50 &614375381
 Rigidbody2D:
   serializedVersion: 4

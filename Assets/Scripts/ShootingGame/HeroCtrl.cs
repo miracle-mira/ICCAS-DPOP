@@ -62,10 +62,16 @@ public class HeroCtrl : MonoBehaviour
         }
 
         if(Input.GetKeyDown("space")){
+            GameObject temp1;
             Vector3 pos = gameObject.transform.position;
             Quaternion rot = gameObject.transform.rotation;
             
-            Instantiate(HeroWeapon,pos,rot); //무기 등장
+
+            pos += transform.forward * 300;
+            temp1 = Instantiate(HeroWeapon,pos,rot); //무기 등장
+            temp1.transform.Translate(0,1,0);
+            //temp1 = transform.Translate(0,10,0);
+
             audSrc.PlayOneShot(attackSound);
         }
     }
@@ -86,8 +92,6 @@ public class HeroCtrl : MonoBehaviour
         if(HP <= 0){
             //Destroy(gameObject);
             sprPlayer.color = new Color(255,255,255,0);
-
-            
             
             if (!hasSpawned)
             {
@@ -95,9 +99,6 @@ public class HeroCtrl : MonoBehaviour
                 Instantiate(effect,transform.position,transform.rotation);
                 hasSpawned = true;
             }
-            
-                
-            
 
             int Level = ScoreMng.inst.level;
             int Score = ScoreMng.inst.score;
