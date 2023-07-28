@@ -1033,12 +1033,12 @@ MonoBehaviour:
   HeroWeapon: {fileID: 7290932555041725969, guid: bc1612a2336fa405cac3cedab05753bc, type: 3}
   HP: 20
   gauage: {fileID: 1952784718}
-  button: {fileID: 1874936395}
   attackSound: {fileID: 8300000, guid: 768876ef01ca30043a665d0f8f9a5a29, type: 3}
   deadSound: {fileID: 8300000, guid: 2fc58d986242aa845b0c76cfcba21fcc, type: 3}
   restartButton: {fileID: 1874936395}
   levelButton: {fileID: 1964578698}
   finishButton: {fileID: 1750863151}
+  effect: {fileID: 100018, guid: a40b64bf23366dc42a892af2c6ff6140, type: 3}
 --- !u!50 &614375381
 Rigidbody2D:
   serializedVersion: 4

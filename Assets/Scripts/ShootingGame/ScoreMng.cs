@@ -72,13 +72,13 @@ public class ScoreMng : MonoBehaviour
         }
 
         if(level == 3){
-            SceneManager.LoadScene("MainScene");
+            SceneManager.LoadScene("jelly");
             levelButton.SetActive(false);
         }
     }
 
     public void Finish(){
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("jelly");
         finishButton.SetActive(false);
     }
 }

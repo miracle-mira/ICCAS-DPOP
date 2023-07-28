@@ -5,23 +5,32 @@ using UnityEngine.UI;
 
 public class HeroCtrl : MonoBehaviour
 {
+    /*주인공 속도 조절*/
     public float move_speed = 3;
     public float spin_speed = 180;
+
+    /*주인공 무기*/
     public GameObject HeroWeapon;
+
+    /*주인공 목숨*/
     public int HP = 20;
-
     public Image gauage;
-    public GameObject button;
+    int maxHP;
 
+
+    /*효과음*/
     AudioSource audSrc;
     public AudioClip attackSound;
     public AudioClip deadSound;
 
+    /*게임종료*/
     public GameObject restartButton;
     public GameObject levelButton;
     public GameObject finishButton;
 
-    int maxHP;
+    /*효과*/
+    public GameObject effect;
+
 
     void Start(){
         maxHP = HP;
@@ -38,7 +47,6 @@ public class HeroCtrl : MonoBehaviour
         if(Input.GetKey("down")){
             transform.Translate(0,-speed_delta,0);
         }
-
 
         float degree_delta = spin_speed * Time.deltaTime;
         if(Input.GetKey("left")){
@@ -73,6 +81,9 @@ public class HeroCtrl : MonoBehaviour
 
         if(HP <= 0){
             Destroy(gameObject);
+
+            audSrc.PlayOneShot(deadSound);
+            Instantiate(effect,transform.position,transform.rotation);
 
             int Level = ScoreMng.inst.level;
             int Score = ScoreMng.inst.score;

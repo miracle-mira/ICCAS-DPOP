@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class HeroWeapon : MonoBehaviour
 {
+    /*무기속도 조절*/
     public float speed = 3;
     public float delay = 3;
+
+    /*효과*/
+    public GameObject effect;
 
     // Start is called before the first frame update
     void Start()
@@ -22,5 +26,6 @@ public class HeroWeapon : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision){
         Destroy(gameObject);  
+        Instantiate(effect,transform.position,transform.rotation);
     }
 }
