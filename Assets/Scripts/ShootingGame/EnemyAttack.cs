@@ -25,6 +25,7 @@ public class EnemyAttack : MonoBehaviour
 
             float delay = Random.Range(1f,delta);
             yield return new WaitForSeconds(delay);
+            /*test*/
         }
     }
 }
