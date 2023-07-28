@@ -22,6 +22,7 @@ public class HeroCtrl : MonoBehaviour
     AudioSource audSrc;
     public AudioClip attackSound;
     public AudioClip deadSound;
+    /*test*/
 
     /*게임종료*/
     public GameObject restartButton;
