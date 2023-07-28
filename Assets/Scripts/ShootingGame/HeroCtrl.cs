@@ -28,6 +28,7 @@ public class HeroCtrl : MonoBehaviour
     public GameObject restartButton;
     public GameObject levelButton;
     public GameObject finishButton;
+    public GameObject finishTema;
 
     /*효과*/
     public GameObject effect;
@@ -119,6 +120,7 @@ public class HeroCtrl : MonoBehaviour
             }
 
             finishButton.SetActive(true);
+            finishTema.SetActive(true);
         }
     }
 }

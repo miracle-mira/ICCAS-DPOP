@@ -37,7 +37,7 @@ public class ScoreMng : MonoBehaviour
     public void AddScore(int num){
         
         score += num;
-        scoreText.text = "점수 " + score;
+        scoreText.text = "Score " + score;
         
     }
 
