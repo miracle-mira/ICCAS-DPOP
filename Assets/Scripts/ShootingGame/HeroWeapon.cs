@@ -26,6 +26,6 @@ public class HeroWeapon : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision){
         Destroy(gameObject);  
-        Instantiate(effect,transform.position,transform.rotation);
+        Instantiate(effect ,transform.position,transform.rotation);
     }
 }

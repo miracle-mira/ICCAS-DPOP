@@ -31,7 +31,9 @@ public class HeroCtrl : MonoBehaviour
 
     /*효과*/
     public GameObject effect;
-
+    public SpriteRenderer sprPlayer; 
+    private bool hasSpawned = false;
+    
 
     void Start(){
         maxHP = HP;
@@ -39,7 +41,8 @@ public class HeroCtrl : MonoBehaviour
     }
 
     void Update()
-    {
+    {   
+        /*move*/
         float speed_delta = move_speed * Time.deltaTime;
         if(Input.GetKey("up")){
             transform.Translate(0,speed_delta,0);
@@ -81,10 +84,20 @@ public class HeroCtrl : MonoBehaviour
         gauage.fillAmount = (float)HP / maxHP;
 
         if(HP <= 0){
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            sprPlayer.color = new Color(255,255,255,0);
 
-            audSrc.PlayOneShot(deadSound);
-            Instantiate(effect,transform.position,transform.rotation);
+            
+            
+            if (!hasSpawned)
+            {
+                audSrc.PlayOneShot(deadSound);
+                Instantiate(effect,transform.position,transform.rotation);
+                hasSpawned = true;
+            }
+            
+                
+            
 
             int Level = ScoreMng.inst.level;
             int Score = ScoreMng.inst.score;
