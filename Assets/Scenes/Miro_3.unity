@@ -10951,7 +10951,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'GREAT!!! '
+  m_Text: Fantastic!!
 --- !u!222 &1065699988
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -487,7 +487,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\uD0C0\uAC9F \uB9DE\uCD94\uAE30"
+  m_Text: Shooting Game
 --- !u!222 &166999545
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2490,7 +2490,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\uBBF8\uB85C\uCC3E\uAE30"
+  m_Text: Maze Game
 --- !u!222 &2115904153
 CanvasRenderer:
   m_ObjectHideFlags: 0
