@@ -111,12 +111,12 @@ public class HeroCtrl : MonoBehaviour
             }
 
             if(Level == 2){
-                if(Score <  20 * Level){restartButton.SetActive(true);finishTema2.SetActive(true);}
+                if(Score <  10 * Level){restartButton.SetActive(true);finishTema2.SetActive(true);}
                 else {levelButton.SetActive(true); finishTema.SetActive(true);}
             }
 
             if(Level == 3){
-                if(Score <  20 * Level){restartButton.SetActive(true);finishTema2.SetActive(true);}
+                if(Score <  10 * Level){restartButton.SetActive(true);finishTema2.SetActive(true);}
                 else {levelButton.SetActive(true); finishTema.SetActive(true);}
             }
 
