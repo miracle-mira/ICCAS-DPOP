@@ -29,6 +29,7 @@ public class HeroCtrl : MonoBehaviour
     public GameObject levelButton;
     public GameObject finishButton;
     public GameObject finishTema;
+    public GameObject finishTema2;
 
     /*효과*/
     public GameObject effect;
@@ -105,22 +106,22 @@ public class HeroCtrl : MonoBehaviour
             int Score = ScoreMng.inst.score;
 
             if(Level == 1){
-                if(Score <  20 * Level){restartButton.SetActive(true);}
-                else {levelButton.SetActive(true);}
+                if(Score <  20 * Level){restartButton.SetActive(true);finishTema2.SetActive(true);}
+                else {levelButton.SetActive(true); finishTema.SetActive(true);}
             }
 
             if(Level == 2){
-                if(Score <  20 * Level){restartButton.SetActive(true);}
-                else {levelButton.SetActive(true);}
+                if(Score <  20 * Level){restartButton.SetActive(true);finishTema2.SetActive(true);}
+                else {levelButton.SetActive(true); finishTema.SetActive(true);}
             }
 
             if(Level == 3){
-                if(Score <  20 * Level){restartButton.SetActive(true);}
-                else {levelButton.SetActive(true);}
+                if(Score <  20 * Level){restartButton.SetActive(true);finishTema2.SetActive(true);}
+                else {levelButton.SetActive(true); finishTema.SetActive(true);}
             }
 
             finishButton.SetActive(true);
-            finishTema.SetActive(true);
+            
         }
     }
 }
