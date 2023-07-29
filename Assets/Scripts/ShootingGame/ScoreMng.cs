@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
+using System.Text;
+using System.Collections.Generic;
 
 public class ScoreMng : MonoBehaviour
 {
@@ -16,23 +19,22 @@ public class ScoreMng : MonoBehaviour
     public int score = 0;
     public int level;
 
+    [System.Serializable]
+    public class GameData
+    {
+        public string userID;
+        public int gameID;
+        public int gameLevel;
+        public string playDate; // Added playDate field
+    }
+
+
     private void Awake(){
         if(inst == null){
             inst = this;
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update() 
-    {
-        
-    }
 
     public void AddScore(int num){
         
@@ -62,23 +64,59 @@ public class ScoreMng : MonoBehaviour
     public void LevelUp(){
         
         if(level == 1){
-           SceneManager.LoadScene("ShootingLevel2");
-        levelButton.SetActive(false);
+            SceneManager.LoadScene("ShootingLevel2");
+            levelButton.SetActive(false);
         }
 
         if(level == 2){
-           SceneManager.LoadScene("ShootingLevel3");
+            SceneManager.LoadScene("ShootingLevel3");
             levelButton.SetActive(false);
         }
 
         if(level == 3){
-            SceneManager.LoadScene("jelly");
+            SceneLoad.LoadSceneHandle("jelly");
             levelButton.SetActive(false);
         }
     }
 
     public void Finish(){
-        SceneManager.LoadScene("jelly");
+        StartCoroutine(SendData());
+        SceneLoad.LoadSceneHandle("jelly");
         finishButton.SetActive(false);
+    }
+
+
+    IEnumerator SendData()
+    {
+        GameData dataToSend = new GameData
+        {
+            userID = "q1234",
+            gameID = 11,
+            gameLevel = level
+        };
+
+        dataToSend.playDate = System.DateTime.Now.ToString("yyyy-MM-dd");
+
+        string jsonData = JsonUtility.ToJson(dataToSend);
+
+
+        // 요청 URL로 바꿔주세요.
+        string url = "http://localhost:3000/sendData/send";
+        byte[] postData = Encoding.UTF8.GetBytes(jsonData);
+
+        Dictionary<string, string> headers = new Dictionary<string, string>();
+        headers.Add("Content-Type", "application/json");
+
+        WWW www = new WWW(url, postData, headers);
+        yield return www;
+
+        if (string.IsNullOrEmpty(www.error))
+        {
+            Debug.Log("Data sent successfully!");
+        }
+        else
+        {
+            Debug.Log("Error sending data: " + www.error);
+        }
     }
 }
