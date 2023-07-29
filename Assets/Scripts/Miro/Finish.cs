@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using System.Text;
-using System.Collections.Generic;
+
 
 public class Finish : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
