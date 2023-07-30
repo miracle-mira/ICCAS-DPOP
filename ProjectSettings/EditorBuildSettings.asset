@@ -6,14 +6,26 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/LogIn.unity
+    guid: 9f25f51d46fb54a7383a9f5a60a4b832
+  - enabled: 1
+    path: Assets/Scenes/jelly.unity
+    guid: 06ee1178eaf744e59acaad4d0ead077c
+  - enabled: 1
+    path: Assets/Scenes/ViewData.unity
+    guid: a53f93d3d1d794aebbd707a21b2e22c5
+  - enabled: 1
+    path: Assets/Scenes/Select.unity
+    guid: 6c42cbd5f395147bfb4c07d2cc15eb78
+  - enabled: 1
+    path: Assets/Scenes/Miro_1.unity
+    guid: 39bd0fae04ba04173a3fcbbcad8fcc3d
+  - enabled: 1
     path: Assets/Scenes/Miro_2.unity
     guid: 12273e5a6995844779f67fe110a550c4
   - enabled: 1
     path: Assets/Scenes/Miro_3.unity
     guid: 63f3cb6e86dae4beda103de22243bc30
-  - enabled: 1
-    path: Assets/Scenes/Miro_1.unity
-    guid: 39bd0fae04ba04173a3fcbbcad8fcc3d
   - enabled: 1
     path: Assets/Scenes/ShootingLevel1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
@@ -24,24 +36,9 @@ EditorBuildSettings:
     path: Assets/Scenes/ShootingLevel3.unity
     guid: f6c1d804a27a549bcbaa49fe1b311b83
   - enabled: 1
-    path: Assets/Scenes/jelly.unity
-    guid: 06ee1178eaf744e59acaad4d0ead077c
-  - enabled: 1
     path: Assets/Scenes/CardGame.unity
     guid: 851f93a0f587a41f5b222ac7f5b55131
   - enabled: 1
-    path: Assets/Scenes/Select.unity
-    guid: 6c42cbd5f395147bfb4c07d2cc15eb78
-  - enabled: 1
     path: Assets/Scenes/Loading.unity
     guid: eb6a66de6bdc948768fca31866c891f3
-  - enabled: 1
-    path: Assets/Scenes/LogIn.unity
-    guid: 9f25f51d46fb54a7383a9f5a60a4b832
-  - enabled: 1
-    path: Assets/Scenes/ddd.unity
-    guid: 5651af1a4c18c4600a32be2df968ff5b
-  - enabled: 1
-    path: Assets/Scenes/ViewData.unity
-    guid: a53f93d3d1d794aebbd707a21b2e22c5
   m_configObjects: {}

@@ -6,6 +6,5 @@ public enum BTNType
 {
     Game1,
     Game2,
-    Game3
 }
 

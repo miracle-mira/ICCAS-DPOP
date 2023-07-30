@@ -27,7 +27,7 @@ public class DataSender : MonoBehaviour
         {
             userID = "q1234",
             gameID = 11,
-            gameLevel = 1
+            gameLevel = 2
         };
 
         dataToSend.playDate = System.DateTime.Now.ToString("yyyy-MM-dd");
@@ -36,7 +36,7 @@ public class DataSender : MonoBehaviour
 
 
         // 요청 URL로 바꿔주세요.
-        string url = "http://localhost:3000/gameData/load";
+        string url = "http://localhost:3000/sendData/send";
         byte[] postData = Encoding.UTF8.GetBytes(jsonData);
 
         Dictionary<string, string> headers = new Dictionary<string, string>();
@@ -48,6 +48,8 @@ public class DataSender : MonoBehaviour
         if (string.IsNullOrEmpty(www.error))
         {
             Debug.Log("Data sent successfully!");
+            Debug.Log(jsonData);
+            
         }
         else
         {
