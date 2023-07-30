@@ -29,7 +29,7 @@ public class ViewData : MonoBehaviour
     for (int i = 0; i < sliders.Length; i++)
     {
         sliders[i].value = Mathf.Lerp(sliders[i].value, targetValues[i], Time.deltaTime * speed);
-        texts[i].text = "2023-08-" + (01 + targetValues1[i]).ToString("00");
+        texts[i].text = "2023-07-" + (26 + targetValues1[i]).ToString("00");
     }
 }
 
@@ -48,7 +48,7 @@ public class ViewData : MonoBehaviour
 
         // 텍스트 생성
         Text text = sliderGO.GetComponentInChildren<Text>();
-        text.text = "2023-08-" + (1 + (int)(targetValue)).ToString("00"); // 2023-07-26부터 2023-07-30까지
+        text.text = "2023-7-" + (26 + (int)(targetValue)).ToString("00"); // 2023-07-26부터 2023-07-30까지
         texts[index] = text;
     }
 }

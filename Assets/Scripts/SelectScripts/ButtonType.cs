@@ -10,7 +10,7 @@ public class ButtonType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     public BTNType currentType;
     public Transform buttonScale;
     Vector3 defaultScale;
-    public int gameLevel; // 기본값으로 1을 설정합니다.
+    public int gameLevel=1; // 기본값으로 1을 설정합니다.
 
     private void Start()
     {
