@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-public class ViewData : MonoBehaviour
+public class ViewData2 : MonoBehaviour
 {
     private List<int> gameIDs = new List<int>();
     private List<int> gameLevels = new List<int>();
@@ -29,12 +29,19 @@ public class ViewData : MonoBehaviour
         texts = new Text[5];
     }
 
+
     private void Update()
     {
         for (int i = 0; i < sliders.Length; i++)
         {
             // Lerping the slider value to the target value smoothly
             sliders[i].value = Mathf.Lerp(sliders[i].value, targetValues[i], Time.deltaTime * speed);
+
+            // 만약 targetValues 값이 슬라이더의 최대값인 maxSliderValue를 초과하면 maxSliderValue로 설정
+            sliders[i].value = Mathf.Min(sliders[i].value, maxSliderValue);
+
+            // 만약 targetValues 값이 슬라이더의 최소값인 0보다 작으면 0으로 설정
+            sliders[i].value = Mathf.Max(sliders[i].value, 0f);
         }
     }
 
@@ -76,7 +83,7 @@ public class ViewData : MonoBehaviour
 
         for (int i = 0; i < gameIDs.Count; i++)
         {
-            if (gameIDs[i] == 11 && sliderCount < 5)
+            if (gameIDs[i] == 12 && sliderCount < 5)
             {
                 // gameID가 11인 데이터만 수집하여 슬라이더와 텍스트를 생성합니다.
                 float xPos = -300f + sliderCount * 150f;
